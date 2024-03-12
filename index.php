@@ -61,3 +61,32 @@ try {
 } catch (PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
+
+?>
+
+<br />
+<hr />
+<br />
+
+<?php
+
+// echo '<pre>';
+// var_dump($_SERVER['DOCUMENT_ROOT']);
+// var_dump($_SERVER['PHP_SELF']);
+// var_dump(__DIR__);
+// echo '</pre>';
+
+?>
+
+<form action="app/FormHandler.php" method="post">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName" value="Mike" required>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName" value="Turner" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" value="turner.mike@gmail.com" required>
+
+  <input type="submit" value="Submit">
+</form>
